@@ -1,0 +1,85 @@
+html, body, .mainbody {
+    width: 100%;
+    height: 100%;
+    
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+  
+  .mainbody {
+    background-color: #007ced;
+    background: linear-gradient(to bottom, #007ced 1%, #cce7ff 100%);
+    position: relative; /* Added position:relative to create stacking context */
+   
+  }
+  
+  .container {
+    position: relative; /* Added position:relative for stacking context */
+  }
+  
+  #cloud-intro {
+    position: absolute; /* Changed position to absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+                url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+                url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+    animation: wind 20s linear infinite;
+  }
+  
+  @keyframes wind {
+    0% {
+      background-position: 0 200px, 0 300px, 100px 250px;
+    }
+    100% {
+      background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+    }
+  }
+  
+  .transparent-div {
+    background-color: rgba(100, 0, 0, 0.); /* Red background with 50% opacity */
+    padding: 20px; /* Add padding for spacing */
+    min-height: 100vh;
+    font-size: 3em;
+    color: #1b0314; /* Text color */
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+/* Apply flexbox layout to the body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the page fills the viewport height */
+}
+
+/* Style the header */
+header {
+    background-color: #aca6a6; 
+    color: white;
+    padding: 10px;
+    
+}
+
+
+/* Style the footer */
+footer {
+    background-color: #a1daf5; 
+    color: white;
+    padding: 10px;
+}
+
+.nav-link {
+    color: black;
+    }
+    
+
+
